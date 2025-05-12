@@ -106,7 +106,7 @@ void Pendant_WHB04B6::send_display_report()
     this->last_display_report = millis();
 
 #if SERIALDEBUG > 1
-    Serial.printf("X:%f,Y:%f,Z%f,A%f\r\n", this->axis_coordinates[0], this->axis_coordinates[1], this->axis_coordinates[2], this->axis_coordinates[3]);
+    Serial.printf("X:%d,Y:%d,Z%d,A%d\r\n", this->GrblStatus.axis_Position[0], this->GrblStatus.axis_Position[1], this->GrblStatus.axis_Position[2], this->GrblStatus.axis_Position[3]);
 #endif
 
     // update axis coordinates in display report data

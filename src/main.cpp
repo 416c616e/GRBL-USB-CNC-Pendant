@@ -31,6 +31,12 @@ void setup()
   GRBLSerial.setRX(GRBLSerialRXPin);
 
   // while ( !Serial ) delay(10);   // wait for native usb
+  
+  for(int i = 0; i < 30; i++)
+  {
+    Serial.println("Booting test...");
+    delay(1000);
+  }
 
   Serial.println("TinyUSB Dual Device Info Example");
 
